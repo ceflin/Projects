@@ -1,28 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Health : MonoBehaviour {
+public class Health : MonoBehaviour
+{
+    public int maxHealth = 100;
+    public int currentHealth;
 
-    private int playerHealth;
-    private int maxPlayerHealth;
+    private Animator anim;
+    private bool damaged = false;
+    private bool isDead = false;
+    
+    // Use this for initialization
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+        currentHealth = maxHealth;
+    }
 
-    private int enemyHealth;
-    private int maxEnemyHealth;
-
-
-    private void TakeDamage(int damage)
+    // Update is called once per frame
+    void Update()
     {
 
     }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private void TakeDamage(int amount)
+    {
+        damaged = true;
+
+        currentHealth -= amount;
+
+        if ( currentHealth <= 0 && !isDead)
+        {
+            Death();
+        }
+    }
+
+    private void Death()
+    {
+        isDead = true;
+        anim.SetTrigger("Death");
+    }
 }
