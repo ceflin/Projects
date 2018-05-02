@@ -134,8 +134,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1243737064600230}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 0, z: -1.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.18, y: -0.0027441448, z: -1.02}
+  m_LocalScale: {x: 1, y: 1, z: 1.0254136}
   m_Children:
   - {fileID: 4508510453656406}
   - {fileID: 4916888131858972}
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   halfDoorLeftTransform: {fileID: 4508510453656406}
   halfDoorRightTransform: {fileID: 4916888131858972}
-  slideDistance: 0.88
+  slideDistance: 6.6
   speed: 1
   doorOpeningSoundClip: {fileID: 8300000, guid: 80d08fa5dccc64ffa90d6734ce03512e,
     type: 3}

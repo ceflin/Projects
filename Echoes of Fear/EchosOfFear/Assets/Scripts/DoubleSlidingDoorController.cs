@@ -25,7 +25,7 @@ public class DoubleSlidingDoorController : MonoBehaviour {
 	public Transform halfDoorRightTransform;	//	Right panel of the sliding door
 
 	[SerializeField]
-	private float slideDistance	= 0.88f;		//	Sliding distance to open each panel the door
+	private float slideDistance;		//	Sliding distance to open each panel the door
 
 	private Vector3 leftDoorClosedPosition;
 	private Vector3 leftDoorOpenPosition;
